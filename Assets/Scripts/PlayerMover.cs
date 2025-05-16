@@ -6,6 +6,8 @@ public class PlayerMover : MonoBehaviour
 
     private float horizontalInput;
 
+    public TimeManager timeManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,5 +26,6 @@ public class PlayerMover : MonoBehaviour
     {
         Destroy(gameObject);
         Destroy(other.gameObject);
+        timeManager.GameOver();
     }
 }

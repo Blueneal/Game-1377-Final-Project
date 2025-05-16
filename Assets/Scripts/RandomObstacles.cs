@@ -3,7 +3,6 @@ using UnityEngine;
 public class RandomObstacles : MonoBehaviour
 {
     public GameObject[] obstaclePrefabs;
-    //public GameObject[] spawnPoints;
 
     private float startDelay = 3;
     private float spawnCooldown = 2.0f;
