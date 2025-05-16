@@ -382,7 +382,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6804988446613422492}
   - component: {fileID: 7790076211108119202}
-  - component: {fileID: 511918269443774634}
   m_Layer: 0
   m_Name: PlayerYellowCar
   m_TagString: Untagged
@@ -435,18 +434,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &511918269443774634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3015731668999998240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10303c9ce60d2e4438a352ddd1499e46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3944835855791843148
 GameObject:
   m_ObjectHideFlags: 0
