@@ -11,6 +11,8 @@ public class RandomObstacles : MonoBehaviour
     public float spawnY;
     public int spawnZ;
 
+    public PlayerMover playerController;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +22,10 @@ public class RandomObstacles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerController.isPlayerDead)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void SpawnRandomObstacle()
