@@ -19,4 +19,10 @@ public class PlayerMover : MonoBehaviour
 
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        Destroy(other.gameObject);
+    }
 }
