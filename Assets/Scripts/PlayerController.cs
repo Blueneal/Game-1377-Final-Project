@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,10 +9,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
 
-    public bool isFlag;
-    public bool isHalfPoint;
-
     private GameManager gameManager;
+    private GameObject FlagTrigger;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,23 +21,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (gameManager.isGameActive)
-        {
-            horizontalInput = Input.GetAxis("Horizontal");
-            forwardInput = Input.GetAxis("Vertical");
-            transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-            transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
-        }
+        horizontalInput = Input.GetAxis("Horizontal");
+        forwardInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+        transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
     }
 
-    public void LapPoint()
+    void OnTriggerEnter(Collider other)
     {
-        if (isFlag == true && isHalfPoint == true)
-        {
-            gameManager.lap += 1;
-            isFlag = false;
-            isHalfPoint = false;
-        }
+        gameManager.lap += 1;
     }
 
 }
