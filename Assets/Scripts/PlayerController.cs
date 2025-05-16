@@ -10,11 +10,12 @@ public class PlayerController : MonoBehaviour
     private float forwardInput;
 
     private GameManager gameManager;
-    private GameObject FlagTrigger;
+    private GameObject flagTrigger;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        flagTrigger = GetComponent<GameObject>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
 
@@ -29,7 +30,10 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        gameManager.lap += 1;
+        if (flagTrigger)
+        {
+            gameManager.lap += 1;
+        }
     }
 
 }

@@ -26,14 +26,13 @@ public class GameManager : MonoBehaviour
     {
         flagTrigger.SetActive(true);
         lapText.text = "Lap: " + lap;
-        timeText.text = "Lap Time: " + timeCount;
+        timeText.text = "Time: ";
         isGameActive = true;
     }
 
     // Update is called once per frame
-    void Update() //adds a count to the time while also checking to see if the game is over
+    void Update()
     {
-        timeText.text = "Lap Time: " + timeCount;
         GameOver();
     }
 
@@ -45,11 +44,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void LateUpdate() //creates timer that counts up, splitting seconds and minutes 
     {
-            timeCount -= Time.deltaTime;
+            timeCount += Time.deltaTime;
             int minutes = Mathf.FloorToInt(timeCount / 60);
             int seconds = Mathf.FloorToInt(timeCount % 60);
-            timeText.text = string.Format("{0:00}:{1:00}");
+            timeText.text = string.Format("Time: {0:00}:{1:00}", minutes, seconds);
     }
 }

@@ -18,7 +18,7 @@ public class AIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (agent.remainingDistance < 0.00001f)
+        if (agent.remainingDistance < agent.stoppingDistance)
         {
             agent.SetDestination(target[currentTargetIndex++].position);
             if (currentTargetIndex == 8)
