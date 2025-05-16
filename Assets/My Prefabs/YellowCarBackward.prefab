@@ -448,10 +448,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5303889636364894501}
   - component: {fileID: 5690984368435885081}
-  - component: {fileID: 9011595829482693348}
-  - component: {fileID: -5677738823904823929}
+  - component: {fileID: 6465084109086771609}
+  - component: {fileID: 7424854689339493457}
   m_Layer: 0
-  m_Name: YellowCar
+  m_Name: YellowCarBackward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -465,8 +465,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5890446015436999859}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -8.1, y: 7.5, z: -67.29}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.313, y: 7.5005774, z: -66.72195}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -474,7 +474,7 @@ Transform:
   - {fileID: 1917152036362874471}
   - {fileID: 8428582946364933486}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &5690984368435885081
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &9011595829482693348
+--- !u!114 &6465084109086771609
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -511,11 +511,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5890446015436999859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a649a1199d52b074492cdb2104ceb251, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a95a0b841ec6f2428ff86b8db6c516d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 80
---- !u!65 &-5677738823904823929
+  speed: 40
+--- !u!65 &7424854689339493457
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

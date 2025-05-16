@@ -6,7 +6,11 @@ public class RandomObstacles : MonoBehaviour
     //public GameObject[] spawnPoints;
 
     private float startDelay = 3;
-    private float spawnCooldown = 1.5f;
+    private float spawnCooldown = 2.0f;
+
+    public int spawnX;
+    public float spawnY;
+    public int spawnZ;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,7 +26,6 @@ public class RandomObstacles : MonoBehaviour
     void SpawnRandomObstacle()
     {
         int obstacleIndex = Random.Range(0, obstaclePrefabs.Length);
-        //int spawnIndex = Random.Range(0, spawnPoints.Length);
-        Instantiate(obstaclePrefabs[obstacleIndex], new Vector3(-7, 8, 51), obstaclePrefabs[obstacleIndex].transform.rotation);
+        Instantiate(obstaclePrefabs[obstacleIndex], new Vector3(spawnX, spawnY, spawnZ), obstaclePrefabs[obstacleIndex].transform.rotation);
     }
 }
