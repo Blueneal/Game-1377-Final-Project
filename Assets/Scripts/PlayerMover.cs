@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerMover : MonoBehaviour
 {
+    //Note: Player Controller has been made a more central code for ease and neccassary solution
+
     private float speed = 10.0f;
 
     private float horizontalInput;
@@ -13,7 +15,9 @@ public class PlayerMover : MonoBehaviour
     public bool isPlayerDead = false;
 
     [SerializeField] TextMeshProUGUI gameoverText;
+    [SerializeField] TextMeshProUGUI exitText;
     [SerializeField] Image gameoverBackground;
+    [SerializeField] Button restartButton;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,7 +47,10 @@ public class PlayerMover : MonoBehaviour
     public void GameOver()
     {
         isGameActive = false;
+        Time.timeScale = 0; //stops the counter from going up
         gameoverText.gameObject.SetActive(true);
+        exitText.gameObject.SetActive(true);
         gameoverBackground.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
     }
 }

@@ -7,6 +7,7 @@ public class RandomObstacles : MonoBehaviour
     private float startDelay = 3;
     private float spawnCooldown = 2.0f;
 
+    //gives flexible spawn position for prefabs for the individual spawners
     public int spawnX;
     public float spawnY;
     public int spawnZ;
@@ -19,7 +20,7 @@ public class RandomObstacles : MonoBehaviour
         InvokeRepeating("SpawnRandomObstacle", startDelay, spawnCooldown);
     }
 
-    // Update is called once per frame
+    // checks to see if player is dead, and destroys spawner if true
     void Update()
     {
         if (playerController.isPlayerDead)

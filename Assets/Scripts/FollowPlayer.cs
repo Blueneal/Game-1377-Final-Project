@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
+    public PlayerMover playerController;
+
     public GameObject player;
 
     private Vector3 offset = new Vector3(0, 3, -5);
